@@ -1,0 +1,15 @@
+query CharactersQuery($offset: Int, $limit: Int, $search: String) {
+  characters(offset: $offset, limit: $limit, search: $search) {
+    offset
+    limit
+    total
+    count
+    results {
+      id
+      name
+      comics {
+        available
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+query CharacterQuery($id: ID!) {
+  character(id: $id) {
+    id
+    name
+    comics {
+      available
+      items {
+        name
+      }
+    }
+  }
+}
